@@ -1,6 +1,7 @@
 let mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/blog');
+let dbURI = 'mongodb://127.0.0.1:27017/blog';
+mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', function () {
   console.log('Mongoose default connection open to ' + dbURI);
